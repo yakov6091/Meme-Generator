@@ -8,7 +8,7 @@
     <title>Meme Genarator</title>
 </head>
 
-<body class="main-layout">
+<body onload="onInit()" class="main-layout">
     <section>
         <header class="main-header">
             <h1 class="logo">Meme Generator</h1>
@@ -23,21 +23,21 @@
         </header>
     </section>
 
+
+
     <section class="canvas-container">
+
         <canvas width="400" height="400"></canvas>
+        <!-- <input class="text" type="text" placeholder="Add text here" /> -->
     </section>
 
-    <!-- <section class="gallery-list">
-        <div class="wrapper">
-            <img src="img/1.jpg" onclick="" />
-            <img src="img/2.jpg" onclick="" />
-            <img src="img/3.jpg" onclick="" />
-            <img src="img/4.jpg" onclick="" />
-            <img src="img/5.jpg" onclick="" />
-        </div>
+    <section class="gallery-list"></section>
 
-    </section> -->
+    <section class="editor"></section>
 
+
+
+    <script src="/js/memeController.js"></script>
 </body>
 
 </html>
