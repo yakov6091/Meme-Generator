@@ -2,8 +2,9 @@
 :root {
     /*primary color*/
     --clr-primary-base: #29b580;
-    --clr-primary-1: #0000;
-    --clr-primary-2: #ffff;
+    --clr-primary-1: #000000;
+    --clr-primary-2: #FFFFFF;
+    --clr-primary-3: #22252c;
 
     /*secondary colors*/
 }
