@@ -1,2 +1,9 @@
 /*PALLETTE*/
-:root {}
+:root {
+    /*primary color*/
+    --clr-primary-base: #29b580;
+    --clr-primary-1: #0000;
+    --clr-primary-2: #ffff;
+
+    /*secondary colors*/
+}
