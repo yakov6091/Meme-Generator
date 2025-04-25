@@ -12,7 +12,7 @@ function renderMeme() {
     const meme = getMeme()
     const img = new Image()
     img.src = 'img/1.jpg'
-    // const text = document.querySelector('.meme-text').value
+    const text = document.querySelector('.meme-text').value
 
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
@@ -23,11 +23,9 @@ function renderMeme() {
             gCtx.strokeStyle = 'blue';
             gCtx.textAlign = 'center';
 
-            gCtx.fillText(line.txt, gElCanvas.width / 2, 50);
-            gCtx.strokeText(line.txt, gElCanvas.width / 2, 50);
+            gCtx.fillText(text, gElCanvas.width / 2, 50);
+            gCtx.strokeText(text, gElCanvas.width / 2, 50);
         })
-
-
     }
 
 }

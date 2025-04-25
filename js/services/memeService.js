@@ -16,3 +16,9 @@ var gMeme = {
 function getMeme() {
     return gMeme
 }
+
+function setLineTxt(text) {
+    const meme = getMeme()
+    meme.lines[meme.selectedLineIdx].txt = text
+    renderMeme()
+}
