@@ -7,6 +7,11 @@ body {
     background-color: var(--clr-primary-3);
 }
 
+h1 {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
 canvas {
     border: 2px solid var(--clr-primary-base);
 }

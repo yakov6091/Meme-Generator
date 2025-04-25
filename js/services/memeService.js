@@ -10,7 +10,6 @@ var gMeme = {
             color: 'red'
         }
     ]
-
 }
 
 function getMeme() {
@@ -22,4 +21,10 @@ function setLineTxt(text) {
     meme.lines[meme.selectedLineIdx].txt = text
     renderMeme()
 }
+
+function setImg(imgId) {
+    const meme = getMeme()
+    meme.selectedImgId = imgId
+}
+
 
