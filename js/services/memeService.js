@@ -22,3 +22,4 @@ function setLineTxt(text) {
     meme.lines[meme.selectedLineIdx].txt = text
     renderMeme()
 }
+
