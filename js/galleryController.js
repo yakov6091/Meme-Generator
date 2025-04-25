@@ -16,6 +16,9 @@ function renderGallery() {
 function onImgSelect(imgId) {
     // console.log('Image selected:', imgId)
     setImg(imgId)
-    // showEditor()
+
+    const elEditor = document.querySelector('.editor')
+    elEditor.classList.remove('hidden')
+
     renderMeme()
 }

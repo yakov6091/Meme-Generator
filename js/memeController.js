@@ -33,5 +33,11 @@ function renderMeme() {
 function onImgSelect(imgId) {
     setImg(imgId)
     renderMeme()
+}
 
+function onDownloadImg(elBtn) {
+    const imgContent = gElCanvas.toDataURL('image/jpeg')
+    // console.log(imgContent)
+    elBtn.href = imgContent
+    elBtn.download = 'my-meme.jpg'
 }
