@@ -27,4 +27,6 @@ function setImg(imgId) {
     meme.selectedImgId = imgId
 }
 
-
+function changeColor(color) {
+    gMeme.lines[gMeme.selectedLineIdx].color = color
+}

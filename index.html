@@ -34,10 +34,15 @@
     <section class="gallery-container"></section>
 
     <section class="editor hidden">
-        <input class="meme-text" type="text" placeholder="Add text here" oninput="setLineTxt(this.value)" />
+        <input class="meme-text" type="text" placeholder="Add text here" oninput="onSetLineTxt(this.value)" />
 
         <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
-            <i class="fa-solid fa-download"></i>Download</button>
+            <i class="fa-solid fa-download"></i>Download</a>
+
+        <label for="color"></label>
+        <input type="color" class="color-input" id="color" value="#000000" onchange="onSetColor(this.value)" />
+
+
     </section>
 
 

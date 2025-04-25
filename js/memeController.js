@@ -13,19 +13,17 @@ function renderMeme() {
     const meme = getMeme()
     const img = new Image()
     img.src = `img/${meme.selectedImgId}.jpg`
-    const text = document.querySelector('.meme-text').value
 
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
 
         meme.lines.forEach(line => {
-            gCtx.font = `${line.size}px arial`;
+            gCtx.font = `${line.size}px impact`;
             gCtx.fillStyle = line.color;
-            gCtx.strokeStyle = 'blue';
             gCtx.textAlign = 'center';
 
             gCtx.fillText(line.txt, gElCanvas.width / 2, 50)
-            gCtx.strokeText(line.txt, gElCanvas.width / 2, 50)
+
         })
     }
 }
@@ -35,9 +33,19 @@ function onImgSelect(imgId) {
     renderMeme()
 }
 
+function onSetLineTxt(txt) {
+    setLineTxt(txt)
+    renderMeme()
+}
+
 function onDownloadImg(elBtn) {
     const imgContent = gElCanvas.toDataURL('image/jpeg')
     // console.log(imgContent)
     elBtn.href = imgContent
     elBtn.download = 'my-meme.jpg'
+}
+
+function onSetColor(color) {
+    changeColor(color)
+    renderMeme()
 }
