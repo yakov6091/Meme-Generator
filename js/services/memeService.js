@@ -19,7 +19,6 @@ function getMeme() {
 function setLineTxt(text) {
     const meme = getMeme()
     meme.lines[meme.selectedLineIdx].txt = text
-    renderMeme()
 }
 
 function setImg(imgId) {
@@ -29,4 +28,13 @@ function setImg(imgId) {
 
 function changeColor(color) {
     gMeme.lines[gMeme.selectedLineIdx].color = color
+}
+
+function increaseFont() {
+    gMeme.lines[gMeme.selectedLineIdx].size += 5
+}
+
+function decreaseFont() {
+    if (gMeme.lines[gMeme.selectedLineIdx].size > 5)
+        gMeme.lines[gMeme.selectedLineIdx].size -= 5
 }

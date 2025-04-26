@@ -22,7 +22,7 @@ function renderMeme() {
             gCtx.fillStyle = line.color;
             gCtx.textAlign = 'center';
 
-            gCtx.fillText(line.txt, gElCanvas.width / 2, 50)
+            gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height / 2)
 
         })
     }
@@ -47,5 +47,15 @@ function onDownloadImg(elBtn) {
 
 function onSetColor(color) {
     changeColor(color)
+    renderMeme()
+}
+
+function onFontIncrease() {
+    increaseFont()
+    renderMeme()
+}
+
+function onFontDecrease() {
+    decreaseFont()
     renderMeme()
 }

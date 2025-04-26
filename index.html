@@ -33,7 +33,7 @@
 
     <section class="gallery-container"></section>
 
-    <section class="editor hidden">
+    <section class="editor-container hidden">
         <input class="meme-text" type="text" placeholder="Add text here" oninput="onSetLineTxt(this.value)" />
 
         <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
@@ -42,6 +42,15 @@
         <label for="color"></label>
         <input type="color" class="color-input" id="color" value="#000000" onchange="onSetColor(this.value)" />
 
+        <div class="font-container">
+            <button class="increase-font" onclick="onFontIncrease()">
+                <i class="fa-solid fa-a"></i><i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="decrease-font" onclick="onFontDecrease()">
+                <i class="fa-solid fa-a"></i><i class="fa-solid fa-minus"></i>
+            </button>
+        </div>
 
     </section>
 
