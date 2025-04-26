@@ -8,7 +8,7 @@ var gMeme = {
             txt: 'I eat pizza',
             size: 20,
             color: 'red',
-            position: { x: 200, y: 150 }
+            position: { x: 200, y: 150 },
         },
         {
             txt: 'I am cool',
@@ -50,7 +50,12 @@ function decreaseFont() {
 }
 
 function selectLine() {
+    const meme = getMeme()
 
+    meme.selectedLineIdx++
+    if (meme.selectedLineIdx >= meme.lines.length) {
+        meme.selectedLineIdx = 0
+    }
 }
 
 function addLine() {
