@@ -7,7 +7,14 @@ var gMeme = {
         {
             txt: 'I eat pizza',
             size: 20,
-            color: 'red'
+            color: 'red',
+            position: { x: 200, y: 150 }
+        },
+        {
+            txt: 'I am cool',
+            size: 20,
+            color: 'blue',
+            position: { x: 200, y: 170 }
         }
     ]
 }
@@ -27,14 +34,32 @@ function setImg(imgId) {
 }
 
 function changeColor(color) {
-    gMeme.lines[gMeme.selectedLineIdx].color = color
+    const meme = getMeme()
+    meme.lines[meme.selectedLineIdx].color = color
 }
 
 function increaseFont() {
-    gMeme.lines[gMeme.selectedLineIdx].size += 5
+    const meme = getMeme()
+    meme.lines[meme.selectedLineIdx].size += 5
 }
 
 function decreaseFont() {
-    if (gMeme.lines[gMeme.selectedLineIdx].size > 5)
-        gMeme.lines[gMeme.selectedLineIdx].size -= 5
+    const meme = getMeme()
+    if (meme.lines[meme.selectedLineIdx].size > 5)
+        meme.lines[meme.selectedLineIdx].size -= 5
+}
+
+function selectLine() {
+
+}
+
+function addLine() {
+    const yPos = 50 + gMeme.lines.length * 20
+    const newLine = {
+        txt: 'Some text',
+        size: 20,
+        color: 'pink',
+        position: { x: 200, y: yPos }
+    }
+    return gMeme.lines.push(newLine)
 }

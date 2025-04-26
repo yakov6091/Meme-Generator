@@ -22,7 +22,7 @@ function renderMeme() {
             gCtx.fillStyle = line.color;
             gCtx.textAlign = 'center';
 
-            gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height / 2)
+            gCtx.fillText(line.txt, line.position.x, line.position.y)
 
         })
     }
@@ -57,5 +57,10 @@ function onFontIncrease() {
 
 function onFontDecrease() {
     decreaseFont()
+    renderMeme()
+}
+
+function onAddLine() {
+    addLine()
     renderMeme()
 }
