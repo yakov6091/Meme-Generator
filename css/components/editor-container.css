@@ -1,0 +1,13 @@
+.editor-container {
+    width: 1200px;
+    height: auto;
+    background-color: var(--clr-primary-4);
+
+
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+
+    margin-inline-end: 20%;
+
+}

@@ -1,0 +1,18 @@
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px 10px;
+    background-color: var(--clr-primary-4);
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-container.hidden {
+    display: none;
+}
