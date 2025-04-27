@@ -16,11 +16,10 @@
             <h1 class="logo">Meme Generator</h1>
             <nav class="main-nav">
                 <ul class="main-nav-list clean-list flex space-evenly">
-                    <li><a href="#">Gallery</a> </li>
+                    <li><a href="#" onclick="renderGallery()">Gallery</a> </li>
                     <li><a href="#">Saved</a> </li>
                     <li><a href="#">Randomize</a> </li>
                 </ul>
-
             </nav>
         </header>
     </section>
@@ -29,7 +28,7 @@
         <canvas width="400" height="400"></canvas>
     </section>
 
-    <section class="gallery-container"></section>
+    <section class="gallery-container hidden"></section>
 
     <section class="editor-container hidden">
         <input class="meme-text" type="text" placeholder="Add text here" oninput="onSetLineTxt(this.value)" />

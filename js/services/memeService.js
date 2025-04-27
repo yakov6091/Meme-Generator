@@ -1,7 +1,7 @@
 'use strict'
 
 var gMeme = {
-    selectedImgId: 1,
+    selectedImgId: 0,
     selectedLineIdx: 0,
     lines: [
         {
