@@ -105,6 +105,6 @@ function OnSetMemeTextFont() {
     const fontSelect = document.querySelector('.text-typo')
     const selectedFont = fontSelect.value
 
-    SetMemeTextFont(selectedFont)
+    setMemeTextFont(selectedFont)
     renderMeme()
 }

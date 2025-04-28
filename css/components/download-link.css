@@ -1,0 +1,9 @@
+.download-link {
+    background-color: var(--clr-secondary-3);
+    color: var(--clr-primary-1);
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    text-decoration-line: none;
+}

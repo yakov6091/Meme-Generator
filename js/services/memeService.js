@@ -90,7 +90,7 @@ function removeLine() {
     }
 }
 
-function SetMemeTextFont(font) {
+function setMemeTextFont(font) {
     const meme = getMeme()
     meme.lines[meme.selectedLineIdx].font = font
 }

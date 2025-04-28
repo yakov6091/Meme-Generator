@@ -17,7 +17,7 @@
             <nav class="main-nav">
                 <ul class="main-nav-list clean-list flex space-evenly">
                     <li><a href="#" onclick="renderGallery()">Gallery</a> </li>
-                    <li><a href="#">Saved</a> </li>
+                    <li><a href="#" onclick="renderSavedGallery()">Saved</a> </li>
                     <li><a href="#">Randomize</a> </li>
                 </ul>
             </nav>
@@ -76,16 +76,25 @@
 
             </section>
 
-            <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
-                <i class="fa-solid fa-download"></i>Download</a>
+            <footer class="links-container flex space-between">
+                <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
+                    <i class="fa-solid fa-download"></i>Download</a>
+
+                <a href=# class="Save-link" onclick="onSaveImg(this)">
+                    <i class="fa-solid fa-floppy-disk"></i>Save</a>
+
+                <a href=# class="share-link" onclick="onShareImg(this)">
+                    <i class="fa-solid fa-share"></i>Share</a>
+            </footer>
+
 
         </section>
     </section>
 
 
-    <script src="/js/services/memeService.js"></script>
-    <script src="/js/memeController.js"></script>
-    <script src="/js/galleryController.js"></script>
+    <script src="js/services/memeService.js"></script>
+    <script src="js/memeController.js"></script>
+    <script src="js/galleryController.js"></script>
 </body>
 
 </html>

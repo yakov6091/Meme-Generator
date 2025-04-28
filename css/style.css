@@ -8,6 +8,9 @@
 @import url(/css/basics/setup.css);
 
 /*COMPONENTS*/
+@import url(/css/components/share-link.css);
+@import url(/css/components/save-link.css);
+@import url(/css/components/download-link.css);
 @import url(/css/components/edit-text.css);
 @import url(/css/components/meme-text.css);
 @import url(/css/components/workspace-container.css);
