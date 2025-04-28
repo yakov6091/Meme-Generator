@@ -1,0 +1,29 @@
+/*IMPACT*/
+@font-face {
+    font-family: Impact;
+    src: url('/fonts/impact/impact.ttf');
+}
+
+/*ARIAL*/
+@font-face {
+    font-family: Arial;
+    src: url('/fonts/arial/ARIAL.TTF');
+}
+
+/*VERDANA*/
+@font-face {
+    font-family: Verdana;
+    src: url('/fonts/verdana/VERDANAI.TTF')
+}
+
+/*TAHOMA*/
+@font-face {
+    font-family: Tahoma;
+    src: url('/fonts/tahoma/tahoma.ttf')
+}
+
+/*GEORGIA*/
+@font-face {
+    font-family: Georgia;
+    src: url('/fonts/georgia/georgia.ttf')
+}

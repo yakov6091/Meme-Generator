@@ -9,12 +9,14 @@ var gMeme = {
             size: 20,
             color: 'red',
             position: { x: 200, y: 150 },
+            font: 'impact'
         },
         {
             txt: 'I am cool',
             size: 20,
             color: 'blue',
-            position: { x: 200, y: 170 }
+            position: { x: 200, y: 170 },
+            font: 'impact'
         }
     ]
 }
@@ -64,7 +66,14 @@ function addLine() {
         txt: 'Some text',
         size: 20,
         color: 'pink',
-        position: { x: 200, y: yPos }
+        position: { x: 200, y: yPos },
+        font: 'impact'
+
     }
     return gMeme.lines.push(newLine)
+}
+
+function SetMemeTextFont(font) {
+    const meme = getMeme()
+    meme.lines[meme.selectedLineIdx].font = font
 }

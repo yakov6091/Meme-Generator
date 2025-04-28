@@ -19,7 +19,7 @@ function renderMeme() {
 
         meme.lines.forEach((line, index) => {
             // Set text properties
-            gCtx.font = `${line.size}px impact`;
+            gCtx.font = `${line.size}px ${line.font}`;
             gCtx.fillStyle = line.color;
             gCtx.textAlign = 'center';
             gCtx.textBaseline = 'middle'
@@ -93,5 +93,13 @@ function onAddLine() {
 
 function onSwitchLine() {
     selectLine()
+    renderMeme()
+}
+
+function OnSetMemeTextFont() {
+    const fontSelect = document.querySelector('.text-typo')
+    const selectedFont = fontSelect.value
+
+    SetMemeTextFont(selectedFont)
     renderMeme()
 }
