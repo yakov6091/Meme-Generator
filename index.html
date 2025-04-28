@@ -33,34 +33,38 @@
 
 
         <section class="editor-container flex space-evenly align-items flex-direction">
+
             <input class="meme-text" type="text" placeholder="Add text here" oninput="onSetLineTxt(this.value)" />
+
+            <section class="edit-text flex">
+                <div class="add-line-container">
+                    <button class="add-line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i>Add line</button>
+                </div>
+
+                <div class="switch-line-container">
+                    <button class="switch-line" onclick="onSwitchLine()">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Switch line</button>
+                </div>
+
+                <div class="font-container">
+                    <button class="increase-font" onclick="onFontIncrease()">
+                        <i class="fa-solid fa-a"></i><i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <button class="decrease-font" onclick="onFontDecrease()">
+                        <i class="fa-solid fa-a"></i><i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+
+                <label for="color"></label>
+                <input type="color" class="color-input" id="color" value="#000000" onchange="onSetColor(this.value)" />
+
+            </section>
 
             <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
                 <i class="fa-solid fa-download"></i>Download</a>
-
-            <label for="color"></label>
-            <input type="color" class="color-input" id="color" value="#000000" onchange="onSetColor(this.value)" />
-
-            <div class="font-container">
-                <button class="increase-font" onclick="onFontIncrease()">
-                    <i class="fa-solid fa-a"></i><i class="fa-solid fa-plus"></i>
-                </button>
-
-                <button class="decrease-font" onclick="onFontDecrease()">
-                    <i class="fa-solid fa-a"></i><i class="fa-solid fa-minus"></i>
-                </button>
-            </div>
-
-            <div class="add-line-container">
-                <button class="add-line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i>Add line</button>
-            </div>
-
-            <div class="switch-line-container">
-                <button class="switch-line" onclick="onSwitchLine()">
-                    <i class="fa-solid fa-arrow-up"></i>
-                    <i class="fa-solid fa-arrow-down"></i>
-                    Switch line</button>
-            </div>
 
         </section>
     </section>

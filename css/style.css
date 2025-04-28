@@ -7,6 +7,8 @@
 @import url(/css/basics/setup.css);
 
 /*COMPONENTS*/
+@import url(/css/components/edit-text.css);
+@import url(/css/components/meme-text.css);
 @import url(/css/components/workspace-container.css);
 @import url(/css/components/editor-container.css);
 @import url(/css/components/gallery-container.css);

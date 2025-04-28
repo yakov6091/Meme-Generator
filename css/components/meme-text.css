@@ -1,0 +1,5 @@
+.meme-text {
+    padding: inherit;
+    border-radius: 10px;
+    border: 5px solid var(--clr-primary-base)
+}
