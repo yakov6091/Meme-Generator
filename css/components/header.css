@@ -1,11 +1,9 @@
 .main-header {
-    background-color: var(--clr-primary-base);
-}
-
-.main-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    background-color: var(--clr-primary-base);
+    position: relative;
 }
 
 ul>li>a {
@@ -20,7 +18,9 @@ ul>li:last-child>a {
 
 
 ul>li>a:hover {
-    background-color: rgb(0, 238, 255);
-    border-radius: 20%;
+    background-color: var(--clr-primary-2);
+    color: var(--clr-primary-base);
+    border-radius: 10px;
+    padding: 5px 5px;
     cursor: pointer;
 }

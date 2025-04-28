@@ -11,4 +11,8 @@
     --clr-secondary-1: #19a59f;
     --clr-secondary-2: #2083df;
     --clr-secondary-3: #9920df;
+
+    /*breakpoint vars*/
+    --large: 1060px;
+    --medium: 890px;
 }

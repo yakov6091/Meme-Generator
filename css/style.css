@@ -1,6 +1,7 @@
 /*SETUP*/
 @import url(./setup/vars.css);
 @import url(./setup/typography.css);
+@import url(./setup/mq.css);
 
 /*BASICS*/
 @import url(./basics/base.css);
@@ -8,6 +9,7 @@
 @import url(./basics/setup.css);
 
 /*COMPONENTS*/
+@import url(./components/button-menu.css);
 @import url(./components/share-link.css);
 @import url(./components/save-link.css);
 @import url(./components/download-link.css);
