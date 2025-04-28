@@ -91,6 +91,11 @@ function onAddLine() {
     renderMeme()
 }
 
+function onRemoveLine() {
+    removeLine()
+    renderMeme()
+}
+
 function onSwitchLine() {
     selectLine()
     renderMeme()

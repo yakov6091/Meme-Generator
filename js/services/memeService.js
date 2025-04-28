@@ -27,6 +27,7 @@ function getMeme() {
 
 function setLineTxt(text) {
     const meme = getMeme()
+    if (!meme.lines.length) return
     meme.lines[meme.selectedLineIdx].txt = text
 }
 
@@ -71,6 +72,22 @@ function addLine() {
 
     }
     return gMeme.lines.push(newLine)
+}
+
+function removeLine() {
+    const meme = getMeme()
+    if (!meme.lines.length) return
+
+    meme.lines.splice(meme.selectedLineIdx, 1)
+
+    // Adjust selectedLineIdx after removing
+    if (meme.selectedLineIdx >= meme.lines.length) {
+        meme.selectedLineIdx = meme.lines.length - 1
+    }
+
+    if (meme.selectedLineIdx < 0) {
+        meme.selectedLineIdx = 0
+    }
 }
 
 function SetMemeTextFont(font) {
