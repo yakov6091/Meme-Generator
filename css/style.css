@@ -9,6 +9,7 @@
 @import url(./basics/setup.css);
 
 /*COMPONENTS*/
+@import url(./components/remove-btn.css);
 @import url(./components/button-menu.css);
 @import url(./components/share-link.css);
 @import url(./components/save-link.css);

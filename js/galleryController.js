@@ -66,10 +66,10 @@ function renderSavedGallery() {
     elGalleryContainer.classList.add('hidden')
 
     elSavedGalleryContainer.innerHTML = gMemes.map(meme => {
-        return `<div class="saved=meme">
-        <button onclick="onRemoveMeme('${meme.id}')">X</button>
-        <img src="${meme.data}" onclick="onSelectPic('${meme.Id}')" />
-        </div>`
+        return `
+        <button class="remove-btn" onclick="onRemoveMeme('${meme.id}')">X</button>
+        <img src="${meme.data}" onclick="onSelectPic('${meme.id}')" />
+        `
     }).join('')
 }
 
@@ -80,9 +80,17 @@ function onSaveMeme() {
     renderGallery()
 }
 
+function onRemoveMeme(memeId) {
+    removeMeme(memeId)
+    renderSavedGallery()
+}
+
 function onSelectPic(memeId) {
-    const pic = getPicById(memeId)
+    const meme = getMemeById(memeId)
+    setImg(meme.selectedImgId)
     const img = new Image()
-    img.src = pic.data
+    img.src = meme.data
+    renderImg(img)
+    renderMeme()
 
 }

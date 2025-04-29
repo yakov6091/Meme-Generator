@@ -4,10 +4,9 @@ const STORAGE_KEY = 'memeDB'
 var gMemes = loadFromStorage(STORAGE_KEY) || []
 
 function removeMeme(memeId) {
-    const memeIdx = gMemes.findindex(meme => meme.id === memeId)
+    const memeIdx = gMemes.findIndex(meme => meme.id === memeId)
     gMemes.splice(memeIdx, 1)
     _savePicsToStorage()
-    renderSavedGallery()
 }
 
 function addMeme(data) {
@@ -26,7 +25,8 @@ function _createMeme(data) {
     return {
         id: makeId(),
         createdAt: Date.now(),
-        data
+        data,
+        selectedImgId: gMeme.selectedImgId
     }
 }
 

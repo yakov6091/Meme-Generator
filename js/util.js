@@ -19,6 +19,11 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
 }
 
+function renderImg(img) {
+    gElCanvas.height = (img.naturalHeight / img.naturalWidth) * gElCanvas.width
+    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+}
+
 function saveToStorage(key, val) {
     localStorage.setItem(key, JSON.stringify(val))
 }
