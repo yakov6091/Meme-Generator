@@ -73,7 +73,6 @@ function renderSavedGallery() {
     }).join('')
 }
 
-
 function onSaveMeme() {
     const data = gElCanvas.toDataURL()
     addMeme(data)
@@ -87,10 +86,10 @@ function onRemoveMeme(memeId) {
 
 function onSelectPic(memeId) {
     const meme = getMemeById(memeId)
+    // console.log(meme)
     setImg(meme.selectedImgId)
     const img = new Image()
     img.src = meme.data
     renderImg(img)
-    renderMeme()
-
+    onImgSelect(meme.selectedImgId)
 }

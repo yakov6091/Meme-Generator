@@ -1,6 +1,7 @@
 'use strict'
 let gElCanvas
 let gCtx
+let gStartPos
 
 function onInit() {
     gElCanvas = document.querySelector('canvas')
@@ -13,6 +14,8 @@ function renderMeme() {
     const meme = getMeme()
     const img = new Image()
     img.src = `img/${meme.selectedImgId}.jpg`
+    console.log(img.src = `img/${meme.selectedImgId}.jpg`);
+
 
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
@@ -30,8 +33,8 @@ function renderMeme() {
 
             // Update position to center the text
             if (line.position.x === undefined || line.position.y === undefined) {
-                line.position.x = gCanvas.width / 2 // Center horizontally
-                line.position.y = gCanvas.height / 2 // Center vertically
+                line.position.x = gElCanvas.width / 2 // Center horizontally
+                line.position.y = gElCanvas.height / 2 // Center vertically
             }
 
             // Highlighting border
@@ -46,17 +49,11 @@ function renderMeme() {
                     textHight + padding * 2
                 )
             }
-
             // Render text
             gCtx.fillText(line.txt, line.position.x, line.position.y)
 
         })
     }
-}
-
-function onImgSelect(imgId) {
-    setImg(imgId)
-    renderMeme()
 }
 
 function onSetLineTxt(txt) {
@@ -113,4 +110,36 @@ function onSaveMeme() {
     const data = gElCanvas.toDataURL()
     addMeme(data)
     renderGallery()
+}
+
+function onDown(ev) {
+    console.log('onDown')
+    const pos = getEvPos(ev)
+    if (!isLineClicked(pos)) return
+
+    gStartPos = pos
+    setLineDrag(true)
+
+    document.body.style.cursor = 'grabbing'
+}
+
+function onMove(ev) {
+    if (!gStartPos) return
+    const meme = getMeme()
+    const line = meme.lines[meme.selectedLineIdx]
+    if (!line.isDrag) return
+
+    const pos = getEvPos(ev)
+    const dx = pos.x - gStartPos.x
+    const dy = pos.y - gStartPos.y
+    moveLine(dx, dy)
+
+    gStartPos = pos
+    renderMeme()
+}
+
+function onUp() {
+    console.log('onUp')
+    setLineDrag(false)
+    document.body.style.cursor = 'grab'
 }
