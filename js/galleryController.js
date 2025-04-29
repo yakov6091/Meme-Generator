@@ -20,8 +20,10 @@ function renderGallery() {
     // Hide the canvas and editor
     const elEditor = document.querySelector('.editor-container')
     const elCanvasContainer = document.querySelector('.canvas-container')
+    const elsavedGalleryContainer = document.querySelector('.saved-gallery-container')
     elEditor.classList.add('hidden')
     elCanvasContainer.classList.add('hidden')
+    elsavedGalleryContainer.classList.add('hidden')
 
     const strHTML = gImgs.map(img => {
         return `<img src="${img.url}" onclick="onImgSelect(${img.id})" />`
@@ -44,5 +46,43 @@ function onImgSelect(imgId) {
     const elGalleryContainer = document.querySelector('.gallery-container')
     elGalleryContainer.classList.add('hidden')
 
+    //hide the saved gallery
+    const elSavedGalleryContainer = document.querySelector('.saved-gallery-container')
+    elSavedGalleryContainer.classList.add('hidden')
+
     renderMeme()
+}
+
+
+function renderSavedGallery() {
+    const elSavedGalleryContainer = document.querySelector('.saved-gallery-container')
+    elSavedGalleryContainer.classList.remove('hidden')
+
+    const elEditor = document.querySelector('.editor-container')
+    const elCanvasContainer = document.querySelector('.canvas-container')
+    const elGalleryContainer = document.querySelector('.gallery-container')
+    elEditor.classList.add('hidden')
+    elCanvasContainer.classList.add('hidden')
+    elGalleryContainer.classList.add('hidden')
+
+    elSavedGalleryContainer.innerHTML = gMemes.map(meme => {
+        return `<div class="saved=meme">
+        <button onclick="onRemoveMeme('${meme.id}')">X</button>
+        <img src="${meme.data}" onclick="onSelectPic('${meme.Id}')" />
+        </div>`
+    }).join('')
+}
+
+
+function onSaveMeme() {
+    const data = gElCanvas.toDataURL()
+    addMeme(data)
+    renderGallery()
+}
+
+function onSelectPic(memeId) {
+    const pic = getPicById(memeId)
+    const img = new Image()
+    img.src = pic.data
+
 }

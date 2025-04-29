@@ -108,3 +108,9 @@ function OnSetMemeTextFont() {
     setMemeTextFont(selectedFont)
     renderMeme()
 }
+
+function onSaveMeme() {
+    const data = gElCanvas.toDataURL()
+    addMeme(data)
+    renderGallery()
+}

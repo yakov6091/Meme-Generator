@@ -25,6 +25,7 @@
     </section>
 
     <section class="gallery-container"></section>
+    <section class="saved-gallery-container"></section>
 
     <section class="workspace-container flex justify-center align-flex-items">
         <div class="canvas-container">
@@ -79,7 +80,7 @@
                 <a href=# class="download-link" onclick="onDownloadImg(this)" download="my-meme.jpg">
                     <i class="fa-solid fa-download"></i>Download</a>
 
-                <a href=# class="Save-link" onclick="onSaveImg(this)">
+                <a href=# class="Save-link" onclick="onSaveMeme()">
                     <i class="fa-solid fa-floppy-disk"></i>Save</a>
 
                 <a href=# class="share-link" onclick="onShareImg(this)">
@@ -91,8 +92,9 @@
     </section>
 
 
-    <script src="js/services/memeService.js"></script>
     <script src="js/util.js"></script>
+    <script src="js/services/memePic.service.js"></script>
+    <script src="js/services/memeService.js"></script>
     <script src="js/memeController.js"></script>
     <script src="js/galleryController.js"></script>
 </body>
