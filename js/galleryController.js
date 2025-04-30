@@ -25,9 +25,15 @@ function renderGallery() {
     elCanvasContainer.classList.add('hidden')
     elsavedGalleryContainer.classList.add('hidden')
 
-    const strHTML = gImgs.map(img => {
-        return `<img src="${img.url}" onclick="onImgSelect(${img.id})" />`
-    }).join('')
+    const strHTML =
+        `
+        <input type="file" id="upload" class="file-input btn" name="image" onchange="onImgInput(event)" />
+        
+       ${gImgs.map(img =>
+            `<img src="${img.url}" onclick="onImgSelect(${img.id})" />`
+        ).join('')}
+
+        `
 
     elGalleryContainer.innerHTML = strHTML
 }

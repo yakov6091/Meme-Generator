@@ -1,6 +1,15 @@
 // The next 2 functions handle IMAGE UPLOADING to img tag from file system: 
 function onImgInput(ev) {
-    loadImageFromInput(ev, renderImg)
+    loadImageFromInput(ev, (img) => {
+        const newImg = {
+            id: gImgs.length + 1,
+            url: img.src
+        }
+        gImgs.push(newImg)
+        renderGallery()
+    })
+
+
 }
 
 function loadImageFromInput(ev, onImageReady) {

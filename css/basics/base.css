@@ -16,14 +16,10 @@ canvas {
     border: 2px solid var(--clr-primary-base);
 }
 
-button {
+/* button {
     margin: 3px auto;
     border-radius: 13px;
     padding: 15px 15px;
     border: none;
     transition-duration: 0.4s;
-}
-
-button:hover {
-    background-color: var(--clr-primary-base);
-}
+} */

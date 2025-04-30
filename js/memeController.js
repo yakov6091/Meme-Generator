@@ -3,6 +3,8 @@ let gElCanvas
 let gCtx
 let gStartPos
 
+let gSelectedEmojiImg = null
+
 function onInit() {
     gElCanvas = document.querySelector('canvas')
     gCtx = gElCanvas.getContext('2d')
@@ -142,6 +144,13 @@ function onUp() {
     console.log('onUp')
     setLineDrag(false)
     document.body.style.cursor = 'grab'
+}
+
+function onSelectEmoji(elImg) {
+    elImg.classList.add('selected')
+    gSelectedEmojiImg = elImg
+
+
 }
 
 
