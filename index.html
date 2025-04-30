@@ -37,7 +37,9 @@
 
             <input class="meme-text" type="text" placeholder="Add text here" oninput="onSetLineTxt(this.value)" />
 
-            <section class="edit-text flex">
+            <section class="edit-text flex space-evenly">
+
+
                 <div class="add-line-container">
                     <button class="add-line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i>Add line</button>
                 </div>
@@ -84,18 +86,22 @@
                 <a href=# class="Save-link" onclick="onSaveMeme()">
                     <i class="fa-solid fa-floppy-disk"></i>Save</a>
 
-                <a href=# class="share-link" onclick="onShareImg(this)">
-                    <i class="fa-solid fa-share"></i>Share</a>
+                <form action="" method="POST" enctype="multipart/form-data" onsubmit="onUploadImg(event)">
+                    <input name="img" id="imgData" type="hidden">
+                    <button class="share-btn" type="submit">
+                        <i class="fa-solid fa-share"></i>
+                        Share</button>
+                </form>
             </footer>
-
 
         </section>
     </section>
 
-
+    <script src="js/upload.js"></script>
     <script src="js/util.js"></script>
-    <script src="js/services/memePic.service.js"></script>
     <script src="js/services/memeService.js"></script>
+    <script src="js/services/memePic.service.js"></script>
+
     <script src="js/memeController.js"></script>
     <script src="js/galleryController.js"></script>
 </body>

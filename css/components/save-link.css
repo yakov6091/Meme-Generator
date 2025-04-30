@@ -6,4 +6,9 @@
     text-align: center;
     padding: 10px;
     text-decoration-line: none;
+    transition-duration: 0.4s;
+}
+
+.Save-link:hover {
+    background-color: var(--clr-secondary-4);
 }

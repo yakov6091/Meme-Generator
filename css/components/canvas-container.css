@@ -1,6 +1,7 @@
 .canvas-container {
-    width: 90vw;
+    height: auto;
+    width: auto;
     margin: 0 auto;
-    margin-inline-start: 20%;
+    /* margin-inline-start: 20%; */
 
 }
