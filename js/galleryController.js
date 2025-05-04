@@ -77,6 +77,8 @@ function renderSavedGallery() {
         <img src="${meme.data}" onclick="onSelectPic('${meme.id}')" />
         `
     }).join('')
+
+    // _savePicsToStorage()
 }
 
 function onSaveMeme() {
