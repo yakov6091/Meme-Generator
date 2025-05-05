@@ -115,7 +115,7 @@ function onSaveMeme() {
 }
 
 function onDown(ev) {
-    console.log('onDown')
+    // console.log('onDown')
     const pos = getEvPos(ev)
     if (!isLineClicked(pos)) return
 
@@ -141,7 +141,7 @@ function onMove(ev) {
 }
 
 function onUp() {
-    console.log('onUp')
+    // console.log('onUp')
     setLineDrag(false)
     document.body.style.cursor = 'grab'
 }
@@ -149,8 +149,6 @@ function onUp() {
 function onSelectEmoji(elImg) {
     elImg.classList.add('selected')
     gSelectedEmojiImg = elImg
-
-
 }
 
 
@@ -163,7 +161,6 @@ function onUploadImg(ev) {
         const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
         console.log('encodedUploadedImgUrl:', encodedUploadedImgUrl)
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`)
-
     }
     uploadImg(canvasData, onSuccess)
 }
